@@ -1,0 +1,114 @@
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+#define coms 0.03
+#define sera 70
+#define serb 50
+#define serf 20
+int main()
+{
+  setlocale(LC_ALL, "Portuguese");
+  double sa, com ;
+  char nf[50], cpf[50], s[50], cde[50], t[50], e[100], tell[30];
+  //nf:nome dos funcionarios s:sexo cde:cargo dentro da empresar t:turno e: email
+  int i, c, x , a, b, f ;
+  //c e variavel de controle de menu i:idade
+
+  // sa:salario com:comissao
+  com = 0;
+  do
+  {
+    printf("Digite um numero de 1 a 4\n");
+    printf("\n 1-Cadastro");
+    printf("\n 2-Alteração");
+    printf("\n 3-Leitura");
+    printf("\n 4-salario \n");
+    printf("\n 5-Fechar \n");
+    scanf("%d", &c);
+    if (c > 5)
+    {
+      c = 0;
+    }
+    switch (c)
+
+    {
+    case 1:
+      printf("\n Digite o nome: \n");
+      scanf("%s", &nf);
+      printf("\n Digite o sexo(M ou F): \n");
+      scanf("%s", &s);
+      printf("\n Digite o cpf: \n");
+      scanf("%s", &cpf);
+      printf("\n Digite o cargo: \n");
+      scanf("%s", &cde);
+      printf("\n Digite o turno: \n");
+      scanf("%s", &t);
+      printf("\n Digite o email: \n");
+      scanf("%s", &e);
+      printf("\n Digite o tell: \n");
+      scanf("%s", &tell);
+      printf("\n Digite a idade:  \n");
+      scanf("%d", &i);
+      printf("\n Digite o salario: \n");
+      scanf("%f", &sa);
+      break;
+
+    case 2:
+      printf("\n Digite o nome: %s \n ", nf);
+      scanf("%s", &nf);
+      printf("\n Digite o sexo(M ou F): %s \n ", s);
+      scanf("%s", &s);
+      printf("\n Digite o cpf: %s \n ", cpf);
+      scanf("%s", &cpf);
+      printf("\n Digite o cargo: %s \n ", cde);
+      scanf("%s", &cde);
+      printf("\n Digite o turno: %s \n ", t);
+      scanf("%s", &t);
+      printf("\n Digite o email: %s \n ", e);
+      scanf("%s", &e);
+      printf("\n Digite o tell: %s \n ", tell);
+      scanf("%s", &tell);
+      printf("\n Digite a idade: %d \n", i);
+      scanf("%d", &i);
+      printf("\n Digite o salario: %f \n", sa);
+      scanf("%f", &sa);
+      break;
+
+    case 3:
+      printf("\n  o nome: %s \n ", nf);
+
+      printf("\n o sexo(M ou F): %s \n ", s);
+
+      printf("\n  o cpf: %s \n ", cpf);
+
+      printf("\n  o cargo: %s \n ", cde);
+
+      printf("\n  o turno: %s \n ", t);
+
+      printf("\n  o email: %s \n ", e);
+
+      printf("\n  o tell: %s \n ", tell);
+
+      printf("\n  a idade: %d \n", i);
+
+      printf("\n o salario: %f \n", sa);
+      break;
+    case 4:
+
+      printf("\n Digite o a: \n");
+      scanf("%d", &f);
+      printf("\n Digite o c: \n");
+      scanf("%d", &a);
+      printf("\n Digite o b: \n");
+      scanf("%d", &b);
+      com  = a * sera + b * serb + f * serf ;
+      com  = com * ( coms ) ;
+      printf(" %f\n", com);
+      break;
+    case 5:
+      printf(" \n Adeus \n");
+      break;
+    }
+
+  } while (c <= 4);
+}
